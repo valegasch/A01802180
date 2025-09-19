@@ -1,0 +1,17 @@
+#ask user for their age and determine if they are an adult or not (>18yrs old)
+age = int(input ("What is your age?"))
+if age >= 18 :
+    print ("you are an adult")
+else : 
+    print("you're not an adult")
+#ask user for their age and determine if they are a teenager
+age = int(input ("What is yout age?"))
+if age >= 13 and age <= 19:
+    print ("You're a teenager")
+else :
+    print ("You're not a teenager")
+#calculate the user's bday by asking the year they were born in
+birth_year = int (input ("What year were you born in?"))
+current_year = int (input ("What year are we in?"))
+aGe = current_year - birth_year
+print ("You are",aGe ) 
