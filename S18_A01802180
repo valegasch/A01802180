@@ -1,0 +1,99 @@
+#Temperature Monitor
+temp = [21,21,20,19,20,19,18]
+
+average_Temperature = sum(temp) / len(temp)
+
+print ("The average temperature is " , average_Temperature)
+
+for temperature in temp:
+    if temperature >= average_Temperature: 
+     print (temperature, "is above average")
+else:
+    print (temperature, "is below average")
+
+#Grades
+students = ["bella", "luca", "vale", "bruno", "pame", "rodrigo" ]
+grades = [95, 62, 97, 60, 76, 58]
+ 
+print (sum(grades) / len(grades), "is the average") 
+
+failedStudentCount = 0
+
+for grade in grades:
+   if grade < 70:
+      failedStudentCount = failedStudentCount + 1
+
+print ("Percentage of students that failed:" )
+print (failedStudentCount)
+
+passedStudentCount = 0
+
+for grade in grades:
+   if grade > 70:
+      passedStudentCount = passedStudentCount + 1
+
+print ("Percentage of students who passed:")
+print (passedStudentCount)
+
+for i in range (len(grades)-1, -1, -1):
+   if grades [i] > 70:
+      del students [i]
+
+print ("Students who failed:")
+print (students)
+
+#Shopping List
+list = ["apples", "carrots", "strawberries", "oreos", "shampoo"]
+purchased_Items = [False,True, False, False, False]
+
+print ("Items not purchased yet:")
+for i in range (len(list)):
+   if not purchased_Items [i]:
+      print (list[i])
+
+for i in range (len(list)):
+   if not purchased_Items [i]:
+     answer = input ("Have you bought" + list[i] + "?(yes/no):") 
+if answer == "yes":
+   purchased_Items [i]= True
+
+
+#Numbers in a list
+numbers = [54,21,8,16,26,10,17,31]
+
+max_value= max(numbers)
+print ("This is the highest value", max_value)
+
+min_value = min(numbers)
+print ("This is the lowest value", min_value)
+
+ordered_list = sorted(numbers)
+print ("This is the ordered list", ordered_list)
+
+#Even and Odd Numbers
+nums = [2,5,8,10,17,23]
+even = []
+odd = []
+
+for n in nums:
+   if n % 2 == 0:
+      even.append(n) 
+   else:
+      odd.append (n)
+   print ("These are all the numbers",nums)
+   print ("These are the even numbers", even)
+   print ("These are the odd numbers", odd)
+   
+
+   #Usernames
+   users = ["bella", "bruno", "ari", "maria", "luis"]
+
+   new_user = input ("Enter your desired username:")
+   
+   if new_user in users:
+      print ("That username is already used. Try another one.")
+   else:
+      users.append (new_user)
+      print ("Your username is now added!")
+      break
+print ("New list of users:", users)
